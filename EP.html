@@ -52,7 +52,10 @@
 
 .phaseTxt {position: absolute; left: 70%;top: 20%;}
 
+.APMobile {display: none}
 @media only screen and (max-width: 600px){
+.AP {display: none}
+.APMobile {display: block}
 .zero {left: 32%;top: 45%;}
 .one {left: 38%; top: 17%;}
 .two {left: 45%; top: 20%}
@@ -107,7 +110,7 @@ w3-round-xxlarge w3-mobile" style="margin-top: 1vw">
 
 <!--1Blk AP pre-test-->
 <div class="block">
-    <div class="roboto h5 w3-center w3-row-padding">
+    <div class="roboto h5 w3-center w3-row-padding w3-mobile">
         This is the action potential of 
     <button id="myocardial cells and His-Purkinje system" style="border: none; cursor: pointer;" 
     onclick="changeTxt(this)">which type of cells?</button>
@@ -128,6 +131,16 @@ w3-round-xxlarge w3-mobile" style="margin-top: 1vw">
         <li id="phase3Txt" style="display: none">Phase 3: K <sup>+</sup>&darr;</li>
         <li id="phase4Txt" style="display: none">Phase 4: K <sup>+</sup>&darr;</li>
     </ul>
+</div>
+<div class="APMobile w3-center w3-padding">
+    <img src="media/EP/Myocardial AP.png" style="width: 100%;padding:1vmax">
+    <ul class="w3-ul roboto h6" >
+            <li>Phase 0: Na <sup>+</sup>&uarr;</li>
+            <li>Phase 1: K <sup>+</sup>&darr;</li>
+            <li>Phase 2: Ca <sup>2+</sup>&uarr;</li>
+            <li>Phase 3: K <sup>+</sup>&darr;</li>
+            <li>Phase 4: K <sup>+</sup>&darr;</li>
+        </ul>
 </div>
 </div>
 
