@@ -18,12 +18,17 @@
 <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap" rel="stylesheet">
 
 <style amp-custom>
-.text {font-family: 'Noto Sans', sans-serif;font-weight: 400}
-.bold {font-family: 'Noto Sans', sans-serif;font-weight: 700}     
- 
-.center {margin-left: auto;margin-right: auto}
-amp-img.contain img {object-fit: contain;}
+    .text {font-family: 'Noto Sans', sans-serif;font-weight: 400}
+    .bold {font-family: 'Noto Sans', sans-serif;font-weight: 700}     
+
+    .slide {width: 95vw;height: 85vh;position: relative;} 
+    @media only screen and (max-width: 600PX){
+        .slide {width: 100vw;height: 300px;}
+    }
+    amp-img.contain img {object-fit: contain;}
+    .amp-carousel-button {border-radius: 50%;}
 </style>
+
 <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
 
 
@@ -46,26 +51,66 @@ amp-img.contain img {object-fit: contain;}
 </amp-analytics>
 
 
-    <amp-carousel height='900' layout='fixed-height' type='slides' controls>
-        <div style="width: 95vw;height: 85vh;position: relative;">
+    <amp-carousel height='900' layout='fixed-height' type='slides' media='(min-width:601px)'
+    style="background-color: #505050;color:white">
+        <figure>
+        <div class="slide">
             <amp-img src="media/hyperK/tall T.JPG" class="contain"
               layout="fill"
               alt="Tall peak T in hyperK"></amp-img>
-              <amp-fit-text layout="responsive" class="text"
-              width="900"
-              height="100"> Tall peak T in hyperkalemia
-              </amp-fit-text>
         </div>
-        <div style="width: 95vw;height: 85vh;position: relative;">
+        <figcaption class="text" style="font-size: 2vmax;display: block"> Tall peak T in hyperkalemia
+        </figcaption>
+        </figure>
+        <figure>
+        <div class="slide">
             <amp-img src="media/hyperK/sinus arrest.png" class="contain"
               layout="fill"
               alt="sinus arrest in hyperK"></amp-img>
         </div>
-        <div style="width: 95vw;height: 85vh;position: relative;">
+        <figcaption class="text" style="font-size: 2vmax;display: block"> Sinus arrest
+        </figcaption>
+        </figure>
+        <figure>
+        <div class="slide">
             <amp-img src="media/hyperK/hyperK sine wave.jpeg" class="contain"
               layout="fill"
               alt="Sine wave in hyperK"></amp-img>
         </div>
+        <figcaption class="text" style="font-size: 2vmax;display: block">Sine Wave
+        </figcaption>
+        </figure>
+    </amp-carousel>
+
+    <amp-carousel height='350' layout='fixed-height' type='slides' media='(max-width:600px)'
+    style="background-color: orange">
+        <figure>
+        <div class="slide">
+            <amp-img src="media/hyperK/tall T.JPG" class="contain"
+              layout="fill"
+              alt="Tall peak T in hyperK"></amp-img>
+        </div>
+        <figcaption class="text" style="font-size: 2vmax;display: block"> Tall peak T in hyperkalemia
+        </figcaption>
+        </figure>
+        <figure>
+        <div class="slide">
+            <amp-img src="media/hyperK/sinus arrest.png" class="contain"
+              layout="fill"
+              alt="sinus arrest in hyperK"></amp-img>
+        </div>
+        <figcaption class="text" style="font-size: 2vmax;display: block"> Sinus arrest
+        </figcaption>
+        </figure>
+        <figure>
+        <div class="slide">
+            <amp-img src="media/hyperK/hyperK sine wave.jpeg" class="contain"
+              layout="fill"
+              alt="Sine wave in hyperK"></amp-img>
+        </div>
+        <figcaption class="text" style="font-size: 2vmax;display: block">Sine Wave
+        </figcaption>
+        </figure>
     </amp-carousel>
 
 </body>
