@@ -21,8 +21,8 @@
 .text {font-family: 'Noto Sans', sans-serif;font-weight: 400}
 .bold {font-family: 'Noto Sans', sans-serif;font-weight: 700}     
  
-.slide {position: relative;width: 100%;height: 700px;}
-
+.center {margin-left: auto;margin-right: auto}
+amp-img.contain img {object-fit: contain;}
 </style>
 <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
 
@@ -46,24 +46,25 @@
 </amp-analytics>
 
 
-    <amp-carousel height='900' layout='fixed-height' type='slides' style="max-width: 1100px">
-        <div class="slide">
-            <amp-img src="media/hyperK/tall T.JPG" style="object-fit: contain;"
-              layout="responsive"
-              width="1000" 
-              height="559"
+    <amp-carousel height='900' layout='fixed-height' type='slides' controls>
+        <div style="width: 95vw;height: 85vh;position: relative;">
+            <amp-img src="media/hyperK/tall T.JPG" class="contain"
+              layout="fill"
               alt="Tall peak T in hyperK"></amp-img>
               <amp-fit-text layout="responsive" class="text"
               width="900"
               height="100"> Tall peak T in hyperkalemia
               </amp-fit-text>
         </div>
-        <div class="slide">
-            <amp-img src="media/hyperK/sinus arrest.png" style="object-fit: contain;"
-              layout="responsive"
-              width="1000" 
-              height="535"
+        <div style="width: 95vw;height: 85vh;position: relative;">
+            <amp-img src="media/hyperK/sinus arrest.png" class="contain"
+              layout="fill"
               alt="sinus arrest in hyperK"></amp-img>
+        </div>
+        <div style="width: 95vw;height: 85vh;position: relative;">
+            <amp-img src="media/hyperK/hyperK sine wave.jpeg" class="contain"
+              layout="fill"
+              alt="Sine wave in hyperK"></amp-img>
         </div>
     </amp-carousel>
 
