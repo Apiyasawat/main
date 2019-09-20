@@ -22,14 +22,14 @@
 <style amp-custom>
     .text {font-family: 'Quicksand', sans-serif;font-weight: 400}
     .head {font-family: 'Quicksand', sans-serif;font-weight: 600}  
-    .block {max-height: 100vh;overflow: hidden}
+    .block {max-height: 100vh;overflow:hidden}
     figcaption {text-align: center}
-    .slide {width: 98vw;height: 80vh;position: relative;background-color: black;margin: 1vmax;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 -4px 8px 0 rgba(0, 0, 0, 0.19);} 
+    .slide {width: 98vw;height: 85vh;position: relative;background-color: transparent;} 
     @media only screen and (max-width: 600PX){
         .slide {width: 100vw;height: 300px;}
     }
     amp-img.contain img {object-fit: contain;}
+    amp-img.shadow img {filter: drop-shadow(0px -8px 20px  rgba(0, 0, 0, 0.5))}
     .amp-carousel-button {border-radius: 50%;background-color: #505050;
         box-shadow: 0 4px 8px 0 rgba(80, 80, 80, 0.2), 0 6px 20px 0 rgba(80, 80, 80, 0.19);}
 
@@ -77,10 +77,10 @@
 
     <!--large screen-->
     <amp-carousel height='900' layout='fixed-height' media='(min-width:601px)'
-    style="background-color: transparent;color:white">
+    style="background-color: transparent;color:white;">
         <figure>
         <div class="slide">
-            <amp-img src="media/hyperK/tall T.JPG" class="contain"
+            <amp-img src="media/hyperK/tall T.JPG" class="contain shadow"
               layout="fill"
               alt="Tall peak T in hyperK"></amp-img>
         </div>
@@ -89,7 +89,7 @@
         </figure>
         <figure>
         <div class="slide">
-            <amp-img src="media/hyperK/sinus arrest.png" class="contain"
+            <amp-img src="media/hyperK/sinus arrest.png" class="contain shadow"
               layout="fill"
               alt="sinus arrest in hyperK"></amp-img>
         </div>
@@ -98,7 +98,7 @@
         </figure>
         <figure>
         <div class="slide">
-            <amp-img src="media/hyperK/hyperK sine wave.jpeg" class="contain"
+            <amp-img src="media/hyperK/hyperK sine wave.jpeg" class="contain shadow"
               layout="fill"
               alt="Sine wave in hyperK"></amp-img>
         </div>
@@ -109,7 +109,7 @@
 
     <!--mobile-->
     <amp-carousel height='380' layout='fixed-height' media='(max-width:600px)'
-    style="background-color: #505050;color:white">
+    style="background-color: transparent;color:white">
         <figure>
         <div class="slide">
             <amp-img src="media/hyperK/tall T.JPG" class="contain"
