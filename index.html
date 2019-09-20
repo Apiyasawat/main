@@ -33,191 +33,309 @@
 
 <link href="https://fonts.googleapis.com/css?family=Quicksand:400,600&display=swap" rel="stylesheet">
 
-
 <style>
+
     .text {font-family: 'Quicksand', sans-serif;font-weight: 400}
-    .head {font-family: 'Quicksand', sans-serif;font-weight: 600}  
-    .block {max-height: 100vh;overflow:hidden}
     
-    .pointer {
-    cursor: pointer;
-    height: 0.5em;
-    width: 0.5em;
-    background-color: #fc553d;
-    border-radius: 50%;
-    position: fixed;  
-    z-index: 1;
-    animation: blink 1.5s linear infinite;
+    .imgBox {
+      padding-top: 0.2vmax;
+      object-fit: contain;height: 80vh;
     }
-    @keyframes blink{
-    0%{opacity: 0;}
-    50%{opacity: 0.7}
-    100%{opacity: 1;}
-    }
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 100vw;max-height: 85vh;
-  position: relative;
-  margin: auto;
-}
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: 16px;height: 16px;
-  margin-top: -22px;
-  padding: 16px;
-  background-color: #505050;color:#f1f1f1;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 50%;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 50%;
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
     
-</style>
-
-</head>
-
-<body>
-   
-    <div class="block" style="height:100vh;background-color:#fff5f8">
+      
+    /* Position the image container (needed to position the left and right arrows) */
+    .container {
+      position: relative;
+      height: 90vh;width: 100%;
+    }
+    
+    @media only screen and (max-width: 600px){
+        .imgBox {max-height: auto; padding-top: 1vmax}
+        .container {height: auto;border: #a9a9a9 solid 0.4vmax;}
+    }
+    
+    
+    .caption {
+        padding: 0.5vmax 3vmax 0.5vmax 1vmax; text-align: center;
+        background-color: rgba(59, 89, 152,0.8);color: white;
+        }
+    
+        
+    /* Hide the images by default */
+    .slideSet0, slideSet1, slideSet2 {
+      display: none; padding: 1vmax;text-align: center;
+    }
+    
+    
+    /* Next & previous buttons */
+    .prevS,
+    .nextS {
+      cursor: pointer;
+      position: absolute;
+      top: 45%;
+      width: auto;
+      padding: 1vmax;
+      color: #a9a9a9;
+      font-weight: bold;
+      font-size: 2vmax;
+    }
+    
+    @media only screen and (max-width: 600px) {
+        .prevS, .nextS {top:30%}
+    }
+    
+    /* Position the "next button" to the right */
+    .nextS {
+      right: 0;
+      }
+    
+    /* On hover, add a black background color with a little bit see-through */
+    .prevS:hover,
+    .nextS:hover {
+      color: rgba(88, 88, 88, 0.9);
+    }
+    
+    .progress-container {
+      width: 100%;
+      height: 1vh;
+      background: #f1f2f1;
+    }
+    
+    .progress-bar {
+      height: 1vh;
+      background: rgba(0, 0, 0, 0.6); 
+      width: 0%;
+    }
+    
+    </style>
+    
+    <body>
+    
+      
+    <!--pointer-->
+    <div onclick="pointer()"><span class="pointer" style="display: none"></span>  
+    
+    <!--2Blk Brady-->
+    <div class="block">
+          
         <div>
-        <img src="media/HLB.png" style="width:30%">
+        electrolytes</div>
+        
+    <!--slideset0-->
+        <div class="container" style="margin-top: 2vh">
+            <div class="progress-container">
+                <div class="progress-bar"></div>  
+                </div>
+                
+            <!--hyperk1-->
+            <div class="slideSet0">
+                <div>
+                    <img src="media/hyperK/tall T.JPG" class="imgBox">
+                    <div class="text caption"> 
+                    Tall T wave</div>
+                    
+                </div>
+            </div>        
+
+            <!--hyperk2-->
+            <div class="slideSet0">
+                <div>
+                    <img src="media/hyperK/sinus arrest.png" class="imgBox">
+                    <div class="text caption"> 
+                    sinus arrest</div>
+                    
+                </div>
+            </div>     
+            
+            <!--hyperk3-->
+            <div class="slideSet0">
+                <div>
+                    <img src="media/hyperK/hyperK sine wave.jpeg" class="imgBox">
+                    <div class="text caption"> 
+                    Sine wave</div>
+                    
+                </div>
+            </div>     
+            
+    
+            
+            
+            
+          <a class="prevS" onclick="plusSlides(-1,0)">❮</a>
+          <a class="nextS" onclick="plusSlides(1,0)">❯</a>
+     
         </div>
-        <div class="head" style="font-size:5vmax;text-align: center;padding: 1vmax;line-height: 100%">
-            Non-cardiac Causes of Abnormal ECGs
+    </div>
+    
+    
+    <!--slideset1-->
+        <div class="container" style="margin-top: 2vh">
+            <div class="progress-container">
+                <div class="progress-bar"></div>  
+                </div>
+                
+            <!--tachy1-->
+            <div class="slideSet1">
+            
+            <div class="w3-container w3-center">
+                <img src="media/EKG/tachy/AF.png" class="imgBox" >
+                <span class="w3-button w3-border w3-round w3-center roboto h8" onclick="showCell('af','t1')" 
+                style="cursor: pointer;" id="t1">
+                Show Answer</span>
+            <span class="roboto h6 w3-mobile caption" id='af'> 
+                Atrial Fibrillation: irregularly irregular rhythm. Noted with fibrillatory waves in V1.
+                </span>
             </div>
-        <div class="text" style="font-size:3vmax;text-align:center;color:#505050;line-height: 100%">
-            Because the HEART is not alone.
-        </div>
-    </div>
-
-    <!-- Slideshow container -->
-    <div class="slideshow-container">
-
-    <!-- Full-width images with number and caption text -->
-    <div class="mySlides fade">
-      <div class="numbertext">1 / 3</div>
-      <img src="media/hyperK/tall T.JPG" style="width:100%">
-      <div class="text">Caption Text</div>
-    </div>
-  
-    <div class="mySlides fade">
-      <div class="numbertext">2 / 3</div>
-      <img src="media/hyperK/sinus arrest.png" style="width:100%">
-      <div class="text">Caption Two</div>
-    </div>
-  
-    <div class="mySlides fade">
-      <div class="numbertext">3 / 3</div>
-      <img src="media/hyperK/hyperK sine wave.jpeg" style="width:100%">
-      <div class="text">Caption Three</div>
-    </div>
-  
-    <!-- Next and previous buttons -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
-    <br>
-  
-    <!-- The dots/circles -->
-    <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-    </div>
-
-<script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
+            </div>   
+    
+            <!--tachy2-->
+            <div class="slideSet1">
+            
+                <div class="w3-container w3-center">
+                    <img src="media/EKG/tachy/svt w st depression.JPG" class="imgBox" >
+                    <span class="w3-button w3-border w3-round w3-center roboto h8" onclick="showCell('svt','t2')" 
+                    style="cursor: pointer;" id="t2">
+                    Show Answer</span>
+                <span class="roboto h6 w3-mobile caption" id='svt'> 
+                    Supraventricular tachycardia (SVT): Narrow complex tachycardia with no clearly visible P wave.
+                    </span>
+                </div>
+                </div>   
+    
+            <!--tachy3-->
+            <div class="slideSet1">
+            
+                <div class="w3-container w3-center">
+                    <img src="media/EKG/tachy/Brady induced PVT.png" class="imgBox" >
+                    <span class="w3-button w3-border w3-round w3-center roboto h8" onclick="showCell('pvt','t3')" 
+                    style="cursor: pointer;" id="t3">
+                    Show Answer</span>
+                <span class="roboto h6 w3-mobile caption" id='pvt'> 
+                    Polymorphic VT with long QT or Torsade de Pointes.
+                    </span>
+                </div>
+                </div>  
+            
+            <!--tachy4-->
+            <div class="slideSet1">
+            
+                <div class="w3-container w3-center">
+                    <img src="media/EKG/tachy/RVOT VT.JPG" class="imgBox" >
+                    <span class="w3-button w3-border w3-round w3-center roboto h8" onclick="showCell('rvot','t4')" 
+                    style="cursor: pointer;" id="t4">
+                    Show Answer</span>
+                <span class="roboto h6 w3-mobile caption" id='rvot'> 
+                    Idiopathic VT from RV outflow tract. Noted with positive QRS in II, III, and aVF;
+                    normal R wave progression in chest leads.
+                    </span>
+                </div>
+                </div>  
+    
+            <!--tachy5-->
+            <div class="slideSet1">
+            
+                <div class="w3-container w3-center">
+                    <img src="media/EKG/tachy/VT EKG.jpg" class="imgBox" >
+                    <span class="w3-button w3-border w3-round w3-center roboto h8" onclick="showCell('vt','t5')" 
+                    style="cursor: pointer;" id="t5">
+                    Show Answer</span>
+                <span class="roboto h6 w3-mobile caption" id='vt'> 
+                    Ischemic VT in a patient with history of inferior wall MI.
+                    </span>
+                </div>
+                </div>  
         
-        function plusSlides(n) {
-          showSlides(slideIndex += n);
-        }
-        
-        function currentSlide(n) {
-          showSlides(slideIndex = n);
-        }
-        
-        function showSlides(n) {
-          var i;
-          var slides = document.getElementsByClassName("mySlides");
-          var dots = document.getElementsByClassName("dot");
-          if (n > slides.length) {slideIndex = 1}    
-          if (n < 1) {slideIndex = slides.length}
-          for (i = 0; i < slides.length; i++) {
-              slides[i].style.display = "none";  
-          }
-          for (i = 0; i < dots.length; i++) {
-              dots[i].className = dots[i].className.replace(" active", "");
-          }
-          slides[slideIndex-1].style.display = "block";  
-          dots[slideIndex-1].className += " active";
-        }
-</script>
-        
-        
-</body>
-</html>
+        <!--tachy6-->
+        <div class="slideSet1">
+            
+                <div class="w3-container w3-center">
+                    <img src="media/EKG/tachy/VT2.png" class="imgBox" >
+                    <span class="w3-button w3-border w3-round w3-center roboto h8" onclick="showCell('vt2','t6')" 
+                    style="cursor: pointer;" id="t6">
+                    Show Answer</span>
+                <span class="roboto h6 w3-mobile caption" id='vt2'> 
+                    Monomorphic VT. VA dissociation is clearly seen.
+                    </span>
+                </div>
+                </div>  
+    
+            <a class="prevS" onclick="plusSlides(-1,1)">❮</a>
+            <a class="nextS" onclick="plusSlides(1,1)">❯</a>
+        </div>     
+    </div>
+    
+    
+      
+    
+    
+    <!--end Div pointer-->
+    </div>
+    
+    
+    <script src="block navigation.js" ></script>
+    <script src="pointer.js" ></script>
+    <script>
+    
+    //nav and pointer
+    //up arrow
+    window.addEventListener("keydown", function(event) {
+        event.preventDefault();
+        if (event.keyCode===38) {
+        blockNav(-1);
+        closeMenu();}
+    })
+    //down arrow
+    window.addEventListener("keydown", function(event) {
+        event.preventDefault();
+        if (event.keyCode===40) {
+        blockNav(1);
+        closeMenu();}
+    })
+    
+       
+    //p
+    window.addEventListener("keydown", function(event) {
+            event.preventDefault();
+            if (event.keyCode===80) {
+            pointerSwitch()}
+        })
+    
+    
+    
+    //pointer
+    var pSwitch = 0;
+    
+    var slideIndex = [1,1,1,1];
+    var slideID = ['slideSet0', 'slideSet1', 'slideSet2','slideSet3'];
+    showSlides(1,0);showSlides(1,1);showSlides(1,2);showSlides(1,3);
+    
+    
+    function plusSlides(n, set) {
+      showSlides(slideIndex[set] += n, set);
+    }
+    
+    function showSlides(n,set) {
+      var i;
+      var slides = document.getElementsByClassName(slideID[set]);
+      if (n > slides.length) {slideIndex[set] = 1}
+      if (n < 1) {slideIndex[set] = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      
+      slides[slideIndex[set]-1].style.display = "block";
+    
+      //adjust range bar
+      var range = (slideIndex[set]/slides.length)*100;
+      var bar = document.getElementsByClassName("progress-bar");
+      bar[set].style.width = range + "%";
+      }
+    
+    </script>	
+    
+    
+    
+    
+    
+    </body>
+    </html>
