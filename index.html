@@ -15,18 +15,24 @@
 <script async src="https://cdn.ampproject.org/v0.js"></script>
 <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.2.js"></script>
 <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap" rel="stylesheet">
+<!--amp-script src="https://ECG.heartrhythmbox.com/block navigation.js" ></amp-script>
+<script src="pointer.js" ></script-->
+<link href="https://fonts.googleapis.com/css?family=Quicksand:400,600&display=swap" rel="stylesheet">
 
 <style amp-custom>
-    .text {font-family: 'Noto Sans', sans-serif;font-weight: 400}
-    .bold {font-family: 'Noto Sans', sans-serif;font-weight: 700}     
-
-    .slide {width: 95vw;height: 85vh;position: relative;} 
+    .text {font-family: 'Quicksand', sans-serif;font-weight: 400}
+    .head {font-family: 'Quicksand', sans-serif;font-weight: 600}  
+    .block {max-height: 100vh;overflow: hidden}
+    figcaption {text-align: center}
+    .slide {width: 98vw;height: 80vh;position: relative;background-color: black;margin: 1vmax;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 -4px 8px 0 rgba(0, 0, 0, 0.19);} 
     @media only screen and (max-width: 600PX){
         .slide {width: 100vw;height: 300px;}
     }
     amp-img.contain img {object-fit: contain;}
-    .amp-carousel-button {border-radius: 50%;}
+    .amp-carousel-button {border-radius: 50%;background-color: #505050;
+        box-shadow: 0 4px 8px 0 rgba(80, 80, 80, 0.2), 0 6px 20px 0 rgba(80, 80, 80, 0.19);}
+
 </style>
 
 <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
@@ -50,8 +56,59 @@
         </script>
 </amp-analytics>
 
+    <div class="block" style="height:100vh;background-color:#fff5f8">
+        <div style="width:60vw;height:60vh;margin-left:auto;margin-right:auto;margin-top:10vh;
+        position: relative;">
+        <amp-img src="media/Oxygen.jpg" class="contain" layout='fill'></amp-img>
+        </div>
+        <div class="head" style="font-size:5vmax;text-align: center;padding: 1vmax;line-height: 100%">
+            Non-cardiac Causes of Abnormal ECGs
+            </div>
+        <div class="text" style="font-size:3vmax;text-align:center;color:#505050;line-height: 100%">
+            Because the HEART is not alone.
+        </div>
+    </div>
 
-    <amp-carousel height='900' layout='fixed-height' type='slides' media='(min-width:601px)'
+    <div class="block" style="background-color:#ff0d7b" >
+    <div class="head" style="font-size:1.8vmax;color:white;margin-left: 1vmax;margin-bottom: 0;
+    padding-top:0.5vmax;">
+        Electrolytes<span style="color:#f7f5dd;font-size: 1.6vmax" class="text"> &gt; Potassium</span>
+    </div>
+
+    <!--large screen-->
+    <amp-carousel height='900' layout='fixed-height' media='(min-width:601px)'
+    style="background-color: transparent;color:white">
+        <figure>
+        <div class="slide">
+            <amp-img src="media/hyperK/tall T.JPG" class="contain"
+              layout="fill"
+              alt="Tall peak T in hyperK"></amp-img>
+        </div>
+        <figcaption class="text" style="font-size: 2vmax;display: block"> Tall peak T in hyperkalemia
+        </figcaption>
+        </figure>
+        <figure>
+        <div class="slide">
+            <amp-img src="media/hyperK/sinus arrest.png" class="contain"
+              layout="fill"
+              alt="sinus arrest in hyperK"></amp-img>
+        </div>
+        <figcaption class="text" style="font-size: 2vmax;display: block"> Sinus arrest
+        </figcaption>
+        </figure>
+        <figure>
+        <div class="slide">
+            <amp-img src="media/hyperK/hyperK sine wave.jpeg" class="contain"
+              layout="fill"
+              alt="Sine wave in hyperK"></amp-img>
+        </div>
+        <figcaption class="text" style="font-size: 2vmax;display: block">Sine Wave
+        </figcaption>
+        </figure>
+    </amp-carousel>
+
+    <!--mobile-->
+    <amp-carousel height='380' layout='fixed-height' media='(max-width:600px)'
     style="background-color: #505050;color:white">
         <figure>
         <div class="slide">
@@ -59,7 +116,8 @@
               layout="fill"
               alt="Tall peak T in hyperK"></amp-img>
         </div>
-        <figcaption class="text" style="font-size: 2vmax;display: block"> Tall peak T in hyperkalemia
+        <figcaption class="text" style="font-size: 2vmax;display: block">
+            Tall peak T in hyperkalemia
         </figcaption>
         </figure>
         <figure>
@@ -81,38 +139,8 @@
         </figcaption>
         </figure>
     </amp-carousel>
-
-    <amp-carousel height='350' layout='fixed-height' type='slides' media='(max-width:600px)'
-    style="background-color: orange">
-        <figure>
-        <div class="slide">
-            <amp-img src="media/hyperK/tall T.JPG" class="contain"
-              layout="fill"
-              alt="Tall peak T in hyperK"></amp-img>
-        </div>
-        <figcaption class="text" style="font-size: 2vmax;display: block"> Tall peak T in hyperkalemia
-        </figcaption>
-        </figure>
-        <figure>
-        <div class="slide">
-            <amp-img src="media/hyperK/sinus arrest.png" class="contain"
-              layout="fill"
-              alt="sinus arrest in hyperK"></amp-img>
-        </div>
-        <figcaption class="text" style="font-size: 2vmax;display: block"> Sinus arrest
-        </figcaption>
-        </figure>
-        <figure>
-        <div class="slide">
-            <amp-img src="media/hyperK/hyperK sine wave.jpeg" class="contain"
-              layout="fill"
-              alt="Sine wave in hyperK"></amp-img>
-        </div>
-        <figcaption class="text" style="font-size: 2vmax;display: block">Sine Wave
-        </figcaption>
-        </figure>
-    </amp-carousel>
-
+    </div>
+    
 </body>
 
 </html>
