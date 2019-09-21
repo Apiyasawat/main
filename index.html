@@ -37,7 +37,9 @@
 
 <style>
     
+    .head {font-family: 'Quicksand', sans-serif;font-weight: 600}
     .text {font-family: 'Quicksand', sans-serif;font-weight: 400}
+    .center {margin-left: auto;margin-right: auto}
     
     .pointer {
     cursor: pointer;
@@ -110,24 +112,63 @@
       color: rgba(88, 88, 88, 0.9);
     }
     
+/* Container for flexboxes */
+.row {
+  display: -webkit-flex;
+  display: flex;
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .row {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+    
       
     </style>
     
     <body>
     
+    <!--title-->
+    <div class="block row" style="height: 100vh">
+        <div class="column">
+            <img src="media/HLB.png" style="width: 40vw;"></div>
+        <div style="font-size: 5vmax;" class="head column">
+        Non-cardiac causes of abnormal ECGs
+        </div>
+    </div>
       
     <!--pointer-->
     <div onclick="pointer()"><span class="pointer" style="display: none"></span>  
     
-    <!--2Blk Brady-->
+    <!--Elytes-->
     <div class="block">
           
-        <div>
+        <div class="text">
         electrolytes</div>
         
-    <!--slideset0-->
+    <!--slideset0 Potassium-->
         <div class="container">
             
+            <!--intro-->
+            <div class="slideSet0 head" 
+            style="color:black;">
+                <div class="center imgBox" style="width: 90%;
+                background-color: white;font-size:5vmax;">
+                    Potassium
+                </div>
+                
+            </div>
             <!--hyperk1-->
             <div class="slideSet0">
                 <div>
