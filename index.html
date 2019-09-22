@@ -287,32 +287,48 @@
             
         </div>
         
-    <!--slideset0 Potassium-->
+    <!--slideset1 Calcium-->
         <div class="container creme">
             
             <!--intro-->
             <div class="slideSet1" style="color:black;">
-                <img src="media/K/actionPotentialK.jpg" style="width: 50vw" class="boxShadow">
-                <div class="text" style="font-size: 1.2vmax">
-                <a href="http://www.onlinejacc.org/content/42/3/401" target="_blank" 
-                style="text-decoration: none;color:#bdc3c7">
-                JACC 2003</a>
-                </div><br>
-                <div class="grey head card textShadow" style="font-size:5vmax;color: white;">
-                    Potassium <br>
-                    <div class="text" style="font-size:2vmax;color: #ddd">The major contributor of repolarization phase.
-                        </div>
-                    </span>
+                <div class="row">
+                    <div class="col" style="padding: 5vh 1vmax">
+                        <img src="media/Ca/AP.jpg" style="align-self: center;width: 100%">
+                    </div>
+                    <div class="col pad head" 
+                    style="font-size: 3vmax;color:#2a2c2b;align-self: center;text-align: left">
+                    <div style="font-size: 5vmax;border-bottom: #374140 solid 0.1vmax;margin-bottom: 1vmax">
+                        Calcium </div>
+                    is the ion of the phase 2. <br>
+                    Imbalance of Calcium affects <span style="color:#ff0d7b;font-size:4vmax">ST segment.</span>
+                    </div>
                 </div>
                 
             </div>
 
-            <!--hypok1-->
+            <!--hyp0Ca-->
             <div class="slideSet1">
                 <div>
-                    <img src="media/K/HypoK/HypoK_1.2.JPG"  class="imgBox"></div>
-                <div class="text caption"> 
-                    90F consulted for bradycardia post colonoscopy.</div>
+                    <img src="media/Ca/HypoCa.jpg"  class="imgBox"></div>
+                <div class="text caption" style="color:#374140"> 
+                    Hypocalcemia: prolonged ST segment.</div>
+            </div>   
+
+            <!--hyperCa-->
+            <div class="slideSet1">
+                <div>
+                    <img src="media/Ca/HyperCa.png"  class="imgBox"></div>
+                <div class="text caption" style="color:#374140"> 
+                    68F with metastic CA with serum Calcium of 14 mEq/l. </div>
+            </div>   
+
+            <!--hyperCa explain-->
+            <div class="slideSet1">
+                <div>
+                    <img src="media/Ca/HyperCa label.png"  class="imgBox"></div>
+                <div class="text caption" style="color:#374140"> 
+                    Osborn wave (positive deflection at J point), short QTc, and ST elevation.</div>
             </div>   
 
            
@@ -321,8 +337,60 @@
           <a class="nextS" onclick="plusSlides(1,1)"><i class="fas fa-arrow-circle-right"></i></a>
      
         </div>
-    </div> 
     
+    </div> 
+
+    
+    <!--metabolic & Toxic-->
+    <div class="block">
+        
+        <div class="text pad" style="font-size: 2.2vmax;color: #2a2c2b">
+        metabolic <span style="color: #374140;">& toxicity</span>
+            
+        </div>
+        
+    <!--slideset2-->
+        <div class="container lightGrey">
+            
+            <!--hypothermia-->
+            <div class="slideSet2" style="color:black;">
+                <div class="row">
+                    <div class="col" style="padding: 5vh 1vmax">
+                        <img src="media/Ca/AP.jpg" style="align-self: center;width: 100%">
+                    </div>
+                    <div class="col pad head" 
+                    style="font-size: 3vmax;color:#2a2c2b;align-self: center;text-align: left">
+                    <div style="font-size: 5vmax;border-bottom: #374140 solid 0.1vmax;margin-bottom: 1vmax">
+                        Calcium </div>
+                    is the ion of the phase 2. <br>
+                    Imbalance of Calcium affects <span style="color:#ff0d7b;font-size:4vmax">ST segment.</span>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!--CO-->
+            <div class="slideSet1">
+                <div>
+                    <img src="media/Ca/HypoCa.jpg"  class="imgBox"></div>
+                <div class="text caption" style="color:#374140"> 
+                    Hypocalcemia: prolonged ST segment.</div>
+            </div>   
+
+            <!--TCA-->
+            <div class="slideSet1">
+                <div>
+                    <img src="media/Ca/HyperCa.png"  class="imgBox"></div>
+                <div class="text caption" style="color:#374140"> 
+                    68F with metastic CA with serum Calcium of 14 mEq/l. </div>
+            </div>   
+     
+            <a class="prevS" onclick="plusSlides(-1,2)"><i class="fas fa-arrow-circle-left"></i></a>
+            <a class="nextS" onclick="plusSlides(1,2)"><i class="fas fa-arrow-circle-right"></i></a>
+        
+        </div>
+    
+    </div>
     
     
       
@@ -365,9 +433,9 @@
     //pointer
     var pSwitch = 0;
     
-    var slideIndex = [1,1];
+    var slideIndex = [1,1,1];
     var slideID = ['slideSet0', 'slideSet1'];
-    showSlides(1,0);showSlides(1,1);
+    showSlides(1,0);showSlides(1,1),showSlides(1,2);
     
     
     function plusSlides(n, set) {
