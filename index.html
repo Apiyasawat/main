@@ -84,10 +84,11 @@
         object-fit: contain;
       }
 
-    @media only screen and (max-width: 600px){
+    @media only screen and (max-width: 800px){
         .block {height: fit-content}
         .imgBox {height: auto;width: 98%;}
-        .container {height: auto;}
+        .container {min-height: 56vw;height:auto;width: 100%;
+        padding-top: 20px}
     }
     
     
@@ -113,18 +114,20 @@
       font-size: 2vmax;
     }
     
-    @media only screen and (max-width: 600px) {
-        .prevS, .nextS {font-size: 16px}
-    }
-    
     /* Position the "next button" to the right */
-    .nextS {right: 1%;}
-    .prevS {left: 1%}
+    .nextS {right: 1%}
+    .prevS {left: 1%;}
     
     /* On hover, add a black background color with a little bit see-through */
     .prevS:hover,
     .nextS:hover {
       color: rgba(88, 88, 88, 0.9);
+    }
+
+    @media only screen and (max-width: 800px) {
+        .prevS, .nextS {font-size: 20px}
+        .nextS {right: 40%;top: 1%}
+        .prevS {left: 40%;top: 1%}
     }
     
 /* Container for flexboxes */
@@ -147,16 +150,22 @@
 }
 
 
+
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .row {
     -webkit-flex-direction: column;
     flex-direction: column;
   }
-  .col2 {width: 99%;}
+  .col2, {width: 99%;}
 }
 
 .headline {padding-top: 1vmax;}
+#jWave > table,th,td {border: 1px solid black;
+  border-collapse: collapse;line-height: 130%;padding: 0.5vmax 1.5vmax;}
+
+#jWave> table, th {font-size:2.5vmax}
+#jWave> table, td {font-size: 2.2vmax}
       
 </style>
     
@@ -366,41 +375,110 @@
         </div>
         
     <!--slideset2-->
-        <div class="container lightGrey">
+        <div class="container lightGrey" style="color:black;">
             
             <!--hypothermia-->
-            <div class="slideSet2" style="color:black;">
-                <div class="row">
-                    <div class="col2">
-                        <img src="media/Ca/AP.jpg" style="align-self: center;width: 100%">
-                    </div>
-                    <div class="col2 pad head" 
-                    style="font-size: 3vmax;color:#2a2c2b;align-self: center;text-align: left;">
-                    <div style="font-size: 5vmax;border-bottom: #374140 solid 0.1vmax;margin-bottom: 1vmax">
-                        Calcium </div>
-                    is the ion of the phase 2. <br>
-                    Imbalance of Calcium affects <span style="color:#ff0d7b;font-size:4vmax">ST segment.</span>
-                    </div>
+            <div class="slideSet2" >
+                <div>
+                    <img src="media/metabolic/Hypothermia.JPG" class="imgBox">
+                </div>
+                <div class="text caption" style="color:#374140"> 
+                    During therapeutic hypothermia.</div>
+            </div>
+
+            <!--hypothermia explain-->
+            <div class="slideSet2" >
+                <div >
+                    <img src="media/metabolic/Hypothermia label.jpg" style="max-height: 70vh;max-width: 100%;
+                    width:auto;height: auto">
+                </div>
+                <div class="text caption" style="color:#374140;line-height: 140%"> 
+                    <span class="head pink" style="color: white">
+                        ECG changes during hypothermia
+                    </span>    <br>
+                    bradycardia, 
+                    <span class="head">prominent J waves or Osborn waves</span>
+                        , prolonged PR/QRS/QTc, sinus arrest,
+                    and VT/VF.
+                </div>
+            </div>
+
+            <!--causes of prominent J wave-->
+            <div class="slideSet2">
+                <div class="head pink card" style="margin: 1vmax;font-size:2.8vmax;color:white">
+                    J waves syndromes
+                </div>
+                <div class="text pad" style="font-size: 2vmax;text-align: left">
+                    Prominent J-wave has been observed in both inherited and acquired conditions propmting 
+                    their designation as J wave syndromes. The proposed mechanism includes the outward shift
+                    of repolarization current during early phase of action potential.
+                    <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3825797/" 
+                    target="_blank" style="font-size: 1.5vmax;text-decoration: none;color: #505050">
+                    (Antzelevich, C. J Electrocardiol 2013.)</a>
                 </div>
                 
+                <div id="jWave" class="center" style="margin-top: 1.2vmax">
+                <table class="text center" style="text-align: left">
+                    <tr style="color:#d9cb9e" class="grey">
+                    <th>Causes of J waves syndromes</th><th>Leads displaying J-wave</th>
+                    </tr>
+                    <tr>
+                        <td>Early repolarization syndrome (ERS) type I</td>
+                        <td>Lateral leads (I, V4-V6)</td>
+                    </tr>
+                    <tr>
+                        <td>ERS type II</td>
+                        <td>Inferior leads (II, III, aVF)</td>
+                    </tr>
+                    <tr>
+                        <td>ERS type III or Global ER</td>
+                        <td>Global</td>
+                    </tr>
+                    <tr>
+                        <td>Brugada Syndrome</td>
+                        <td>RV leads (V1-V3)</td>
+                    </tr>
+                    <tr>
+                        <td>Hypothermia or hypercalcemia mediated</td>
+                        <td>Global</td>
+                    </tr>
+                </table>
+                </div>
             </div>
 
             <!--CO-->
-            <div class="slideSet2">
+            <div class="slideSet2" >
                 <div>
-                    <img src="media/Ca/HypoCa.jpg"  class="imgBox"></div>
+                    <img src="media/metabolic/CO.png" class="imgBox">
+                </div>
                 <div class="text caption" style="color:#374140"> 
-                    Hypocalcemia: prolonged ST segment.</div>
-            </div>   
+                    78F was found unresponsive in a car with running engine.</div>
+            </div>
 
-            <!--TCA-->
-            <div class="slideSet2">
-                <div>
-                    <img src="media/Ca/HyperCa.png"  class="imgBox"></div>
-                <div class="text caption" style="color:#374140"> 
-                    68F with metastic CA with serum Calcium of 14 mEq/l. </div>
-            </div>   
-     
+            <!--CO xplain-->
+            <div class="slideSet2" >
+                    <div class="head pink card" style="margin: 1vmax;font-size:2.8vmax;color:white">
+                            Carbon Monoxide Poisoning
+                        </div>
+                    <div>
+                        <img src="media/metabolic/CO poisoning spectrum.png" 
+                        style="max-height: 60vh;max-width: 100%;height: auto;width: auto">     
+                    </div>
+                    
+                     <div class="text caption" style="color:#374140;font-size: 2vmax"> 
+                    Cardiovascular sequelae of CO poisoning are frequent, with myocardial injury assessed by
+                    biomarkers or ECG in up to 1/3 of patients. </div>
+                    <div class="text" style="font-size: 1.5vmax;text-decoration: none;color: #505050">
+                            <a href="http://www.onlinejacc.org/content/45/9/1513" target="_blank"
+                            style="font-size:1.5vmax;color: #505050;">JACC 2005, </a>
+                    <a href="https://jamanetwork.com/journals/jama/fullarticle/202255" target="_blank"
+                    style="font-size:1.5vmax;color: #505050;">JAMA 2006, </a> and
+                    <a href="https://www.nejm.org/doi/full/10.1056/NEJMcp0808891" target="_blank"
+                    style="font-size:1.5vmax;color: #505050;">NEJM 2009.</a>
+                    
+                    </div>
+            </div>
+
             <a class="prevS" onclick="plusSlides(-1,2)"><i class="fas fa-arrow-circle-left"></i></a>
             <a class="nextS" onclick="plusSlides(1,2)"><i class="fas fa-arrow-circle-right"></i></a>
         
