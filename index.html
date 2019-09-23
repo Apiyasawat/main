@@ -34,16 +34,18 @@
 <link href="https://fonts.googleapis.com/css?family=Quicksand:400,600&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/2c3e1e841c.js" crossorigin="anonymous"></script>
 
+</head>
 
 <style>
-    .block {height: 100vh}
+    .block {height: 100vh;}
     .head {font-family: 'Quicksand', sans-serif;font-weight: 600}
     .text {font-family: 'Quicksand', sans-serif;font-weight: 400}
     .center {margin-left: auto;margin-right: auto}
     .textShadow {text-shadow: 0 -5px 10px rgba(0, 0, 0, 0.3);}
     .boxShadow {box-shadow: 0 -5px 10px 0 rgba(0, 0, 0, 0.2), 0 -8px 20px 0 rgba(0, 0, 0, 0.19);}
     .pad {padding: 1vmax}
-    .card {border-radius: 5px;box-shadow: 2px -2px 4px 0 rgba(0, 0, 0, 0.2), 3px -3px 6px 0 rgba(0, 0, 0, 0.19);}
+    .card {border-radius: 5px;padding: 1vmax;margin: 0.5vmax;
+    box-shadow: 2px -2px 4px 0 rgba(0, 0, 0, 0.2), 3px -3px 6px 0 rgba(0, 0, 0, 0.19);}
     
     /*color*/
     .pink {background-color: #ff0d7b}
@@ -73,7 +75,7 @@
     /* Position the image container (needed to position the left and right arrows) */
     .container {
       position: relative;
-      height: 90vh;width: 98vw;
+      height: 92vh;width: 98vw;
     }
     
     .imgBox {
@@ -137,6 +139,12 @@
   -ms-flex: 1;
   flex: 1;
 }
+.col2 {
+    -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;width: 50vw;
+
+}
 
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
@@ -145,9 +153,12 @@
     -webkit-flex-direction: column;
     flex-direction: column;
   }
+  .col2 {width: 99%;}
 }
+
+.headline {padding-top: 1vmax;}
       
-    </style>
+</style>
     
     <body>
     
@@ -172,8 +183,9 @@
     
     <!--Elytes K-->
     <div class="block">
-          
-        <div class="text pad" style="font-size: 2.2vmax;color: #2a2c2b">
+        
+        <!--headline-->
+        <div class="text headline" style="font-size: 2.2vmax;color: #2a2c2b">
         electrolytes <span style="color: #374140;font-size:1.8vmax">&bull; Potassium</span>
             
         </div>
@@ -183,17 +195,21 @@
             
             <!--intro-->
             <div class="slideSet0" style="color:black;">
-                <img src="media/K/actionPotentialK.jpg" style="width: 50vw" class="boxShadow">
-                <div class="text" style="font-size: 1.2vmax">
-                <a href="http://www.onlinejacc.org/content/42/3/401" target="_blank" 
-                style="text-decoration: none;color:#bdc3c7">
-                JACC 2003</a>
-                </div><br>
-                <div class="grey head card textShadow" style="font-size:5vmax;color: white;">
-                    Potassium <br>
-                    <div class="text" style="font-size:2vmax;color: #ddd">The major contributor of repolarization phase.
+                <div class="row">
+                    <div class="col2 card" style="align-self: center;background-color: #ddd">
+                    <img src="media/K/actionPotentialK.jpg" style="width: 50vw" class="boxShadow">
+                        <div class="text" style="font-size: 1.2vmax">
+                            <a href="http://www.onlinejacc.org/content/42/3/401" target="_blank" 
+                            style="text-decoration: none;color:#bdc3c7">
+                            JACC 2003</a>
                         </div>
-                    </span>
+                    </div>
+                    <div class="col2 grey head card textShadow" style="font-size:5vmax;color: white;
+                    text-align: left;align-self: center">
+                        Potassium <br>
+                        <div class="text" style="font-size:2vmax;color: #ddd">The major contributor of repolarization phase.
+                        </div>
+                    </div>
                 </div>
                 
             </div>
@@ -227,18 +243,18 @@
 
             <!--k membrance potential-->
             <div class="slideSet0">
-                <div>
-                    <img src="media/K/K_memPot.gif"  class="imgBox" style="width: 70vw;height:fit-content">
+                <div class="row" style="text-align: center">
+                <div class="col2 card" style="background-color: #ddd;align-self: center">
+                    <img src="media/K/K_memPot.gif" style="width: 100%;">
                 </div>
-                <div class="grey card text" style="font-size:2.2vmax;color: #ddd;text-align: left;padding:1vmax;
-                line-height: 120%;margin-top: 1vmax">
+                <div class="grey card text col2" style="font-size:2.2vmax;color: #ddd;
+                line-height: 120%;align-self: center">
                     The <span style="color:white;font-weight: 600">potassium</span> 
                     gradient across the cellular membrane is the most important factor 
-                    in establishing this membrane potential.    <br>
+                    in establishing this membrane potential.    <br><br>
                     During <span style="color:white;font-weight: 600">hyperkalemia</span>, the gradient is reduced resulted in the reduction of phase 0 of action potential
                     and <span style="color:white;font-weight: 600">slowing of the impulse conduction.</span>
-                    
-                </span>
+                </div>
                 </div>
             </div> 
 
@@ -282,7 +298,7 @@
     <!--Elytes Ca-->
     <div class="block">
           
-        <div class="text pad" style="font-size: 2.2vmax;color: #2a2c2b">
+        <div class="text headline" style="font-size: 2.2vmax;color: #2a2c2b">
         electrolytes <span style="color: #374140;font-size:1.8vmax">&bull; Calcium</span>
             
         </div>
@@ -293,10 +309,10 @@
             <!--intro-->
             <div class="slideSet1" style="color:black;">
                 <div class="row">
-                    <div class="col" style="padding: 5vh 1vmax">
+                    <div class="col2">
                         <img src="media/Ca/AP.jpg" style="align-self: center;width: 100%">
                     </div>
-                    <div class="col pad head" 
+                    <div class="col2 pad head" 
                     style="font-size: 3vmax;color:#2a2c2b;align-self: center;text-align: left">
                     <div style="font-size: 5vmax;border-bottom: #374140 solid 0.1vmax;margin-bottom: 1vmax">
                         Calcium </div>
@@ -344,7 +360,7 @@
     <!--metabolic & Toxic-->
     <div class="block">
         
-        <div class="text pad" style="font-size: 2.2vmax;color: #2a2c2b">
+        <div class="text headline" style="font-size: 2.2vmax;color: #2a2c2b">
         metabolic <span style="color: #374140;">& toxicity</span>
             
         </div>
@@ -355,10 +371,10 @@
             <!--hypothermia-->
             <div class="slideSet2" style="color:black;">
                 <div class="row">
-                    <div class="col" style="padding: 5vh 1vmax">
+                    <div class="col2">
                         <img src="media/Ca/AP.jpg" style="align-self: center;width: 100%">
                     </div>
-                    <div class="col pad head" 
+                    <div class="col2 pad head" 
                     style="font-size: 3vmax;color:#2a2c2b;align-self: center;text-align: left;">
                     <div style="font-size: 5vmax;border-bottom: #374140 solid 0.1vmax;margin-bottom: 1vmax">
                         Calcium </div>
