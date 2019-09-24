@@ -37,7 +37,7 @@
 </head>
 
 <style>
-    .block {height: 100vh;}
+    .block {height: 100vh;width: 100%}
     .head {font-family: 'Quicksand', sans-serif;font-weight: 600}
     .text {font-family: 'Quicksand', sans-serif;font-weight: 400}
     .center {margin-left: auto;margin-right: auto}
@@ -45,6 +45,8 @@
     .boxShadow {box-shadow: 0 -5px 10px 0 rgba(0, 0, 0, 0.2), 0 -8px 20px 0 rgba(0, 0, 0, 0.19);}
     .pad {padding: 1vmax}
     .card {border-radius: 5px;padding: 1vmax;margin: 0.5vmax;
+    box-shadow: 2px -2px 4px 0 rgba(0, 0, 0, 0.2), 3px -3px 6px 0 rgba(0, 0, 0, 0.19);}
+    .cardNoMargin {border-radius: 5px;padding: 1vmax;
     box-shadow: 2px -2px 4px 0 rgba(0, 0, 0, 0.2), 3px -3px 6px 0 rgba(0, 0, 0, 0.19);}
     
     /*color*/
@@ -75,7 +77,7 @@
     /* Position the image container (needed to position the left and right arrows) */
     .container {
       position: relative;
-      height: 92vh;width: 98vw;
+      height: 92vh;width: 100%;
     }
     
     .imgBox {
@@ -94,7 +96,7 @@
     
     
     .caption {
-        padding:1vmax; text-align: center;font-size: 2vmax;
+        padding:1vmax; text-align: center;font-size: 2.5vmax;
         color: white;
         }
     
@@ -125,12 +127,7 @@
       color: rgba(88, 88, 88, 0.9);
     }
 
-    @media only screen and (max-width: 800px) {
-        .prevS, .nextS {font-size: 20px}
-        .nextS {right: 40%;top: 1%}
-        .prevS {left: 40%;top: 1%}
-    }
-    
+       
 /* Container for flexboxes */
 .row {
   display: -webkit-flex;
@@ -151,7 +148,7 @@
 }
 
 .headline {padding-top: 1vmax;}
-
+.mobileOnly {display: none;}
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media (max-width: 800px) {
   .row {
@@ -159,16 +156,24 @@
     flex-direction: column;
   }
   .col2 {width: 99%;}
-  .headline {padding-top: 1.5vmax}
+  .headline {padding-top: 1.5vmax;}
+  .mobileOnly {display:block}
+  .noMobile {display: none}
+  .nextS, .prevS {display: none}
 }
 
 
-#jWave > table,th,td {border: 1px solid black;
+#jWave > table,th,td {border: 2px solid #505050;
   border-collapse: collapse;line-height: 130%;padding: 0.5vmax 1.5vmax;}
 
 #jWave> table, th {font-size:2.5vmax}
 #jWave> table, td {font-size: 2.2vmax}
-      
+
+.slideProgress {font-size: 1.4vmax;color:#bbb;vertical-align: 5%} 
+.navM {position: absolute;top: 0.5%;left: 44%;color:#888;font-size: 2vmax;
+font-family: 'Quicksand', sans-serif;font-weight: 400;}    
+
+
 </style>
     
     <body>
@@ -198,6 +203,7 @@
         <!--headline-->
         <div class="text headline" style="font-size: 2.2vmax;color: #2a2c2b">
         electrolytes <span style="color: #374140;font-size:1.8vmax">&bull; Potassium</span>
+        <span class="slideProgress noMobile">1/8</span>
             
         </div>
         
@@ -211,7 +217,7 @@
                     <img src="media/K/actionPotentialK.jpg" style="width: 100%" class="boxShadow">
                         <div class="text" style="font-size: 1.2vmax">
                             <a href="http://www.onlinejacc.org/content/42/3/401" target="_blank" 
-                            style="text-decoration: none;color:#bdc3c7">
+                            style="text-decoration: none;color:#888">
                             JACC 2003</a>
                         </div>
                     </div>
@@ -299,8 +305,14 @@
                 </div>
             </div>     
             
-          <a class="prevS" onclick="plusSlides(-1,0)"><i class="fas fa-arrow-circle-left"></i></a>
-          <a class="nextS" onclick="plusSlides(1,0)"><i class="fas fa-arrow-circle-right"></i></a>
+            
+            <a class="prevS noMobile" onclick="plusSlides(-1,0)"><i class="fas fa-angle-left"></i></a>
+            <a class="nextS noMobile" onclick="plusSlides(1,0)"><i class="fas fa-angle-right"></i></a>
+            <span class="mobileOnly navM">
+                <a onclick="plusSlides(-1,0)"><i class="fas fa-angle-left"></i></a>&nbsp;
+                <span class="slideProgressM"></span>&nbsp;
+                <a onclick="plusSlides(1,0)"><i class="fas fa-angle-right"></i></a>
+            </span>
      
         </div>
     </div>
@@ -311,7 +323,7 @@
           
         <div class="text headline" style="font-size: 2.2vmax;color: #2a2c2b">
         electrolytes <span style="color: #374140;font-size:1.8vmax">&bull; Calcium</span>
-            
+        <span class="slideProgress noMobile"></span>    
         </div>
         
     <!--slideset1 Calcium-->
@@ -358,10 +370,13 @@
                     Osborn wave (positive deflection at J point), short QTc, and ST elevation.</div>
             </div>   
 
-           
-                        
-          <a class="prevS" onclick="plusSlides(-1,1)"><i class="fas fa-arrow-circle-left"></i></a>
-          <a class="nextS" onclick="plusSlides(1,1)"><i class="fas fa-arrow-circle-right"></i></a>
+            <a class="prevS noMobile" onclick="plusSlides(-1,1)"><i class="fas fa-angle-left"></i></a>
+            <a class="nextS noMobile" onclick="plusSlides(1,1)"><i class="fas fa-angle-right"></i></a>
+            <span class="mobileOnly navM">
+                <a onclick="plusSlides(-1,1)"><i class="fas fa-angle-left"></i></a>&nbsp;
+                <span class="slideProgressM"></span>&nbsp;
+                <a onclick="plusSlides(1,1)"><i class="fas fa-angle-right"></i></a>
+            </span>
      
         </div>
     
@@ -373,7 +388,7 @@
         
         <div class="text headline" style="font-size: 2.2vmax;color: #2a2c2b">
         metabolic <span style="color: #374140;">& toxicity</span>
-            
+        <span class="slideProgress noMobile"></span>    
         </div>
         
     <!--slideset2-->
@@ -394,8 +409,8 @@
                     <img src="media/metabolic/Hypothermia label.jpg" style="max-height: 70vh;max-width: 100%;
                     width:auto;height: auto">
                 </div>
-                <div class="text caption" style="color:#374140;line-height: 140%"> 
-                    <span class="head pink" style="color: white">
+                <div class="text caption" style="color:#374140;line-height: 140%;font-size: 2vmax"> 
+                    <span class="head pink" style="color: white;font-size: 2.5vmax">
                         ECG changes during hypothermia
                     </span>    <br>
                     bradycardia, 
@@ -470,7 +485,7 @@
                      <div class="text caption" style="color:#374140;font-size: 2vmax"> 
                     Cardiovascular sequelae of CO poisoning are frequent, with myocardial injury assessed by
                     biomarkers or ECG in up to 1/3 of patients. </div>
-                    <div class="text" style="font-size: 1.5vmax;text-decoration: none;color: #505050">
+                    <div class="text" style="font-size: 1.2vmax;text-decoration: none;color: #505050">
                             <a href="http://www.onlinejacc.org/content/45/9/1513" target="_blank"
                             style="font-size:1.5vmax;color: #505050;">JACC 2005, </a>
                     <a href="https://jamanetwork.com/journals/jama/fullarticle/202255" target="_blank"
@@ -490,34 +505,46 @@
                         24F with seizure</div>
                 </div>
             
-            <!--TCA exp-->
+            <!--TCA label-->
             <div class="slideSet2" >
                     <div>
                         <img src="media/metabolic/TCA label.png" class="imgBox">
                     </div>
                     <div class="text caption" style="color:#374140"> 
                         TCA Intoxication</div>
-                </div>
+            </div>
 
-            <a class="prevS" onclick="plusSlides(-1,2)"><i class="fas fa-arrow-circle-left"></i></a>
-            <a class="nextS" onclick="plusSlides(1,2)"><i class="fas fa-arrow-circle-right"></i></a>
+            <!--TCA detail-->
+            <div class="slideSet2" >
+                <div class="cardNoMargin pink head" 
+                style="font-size: 3vmax;color:white;">
+                ECG Features of TCA Toxicity
+                </div>
+                <ul class="text pad center" style="font-size: 2vmax;max-width: 800px;text-align: center;
+                line-height: 120%;font-weight: 600;list-style: none">
+                    <li class="pad cardNoMargin">Sinus Tachycardia is the most common.</li>
+                    <li class="pad cardNoMargin">QRS duration in limb leads is related to prognosis.<br> 
+                        QRS&ge;100 is an indication for Sodium Bicarbonate.</li>
+                    <li class="pad cardNoMargin">R/S ratio in aVR is related to development of seizure and dysrhythmias.</li>
+                    <li class="pad cardNoMargin">Other ECG findings: prolonged PR/QRS/QT, right axis deviation, and Brugada pattern.</li>
+                    <li class="pad cardNoMargin">Brugada pattern was found to be associated with higher mortality.</li>
+                </ul>
+                <a href="https://emedicine.medscape.com/article/819204-workup#c8" 
+                style="font-size: 1.2vmax;color:#505050" class="text">
+                Tsai, et al. Emergency Medicine 2017.</a>
+            </div>
+   
+            <a class="prevS noMobile" onclick="plusSlides(-1,2)"><i class="fas fa-angle-left"></i></a>
+            <a class="nextS noMobile" onclick="plusSlides(1,2)"><i class="fas fa-angle-right"></i></a>
+            <span class="mobileOnly navM">
+                <a onclick="plusSlides(-1,2)"><i class="fas fa-angle-left"></i></a>&nbsp;
+                <span class="slideProgressM"></span>&nbsp;
+                <a onclick="plusSlides(1,2)"><i class="fas fa-angle-right"></i></a>
+            </span>
         
         </div>
     
     </div>
-    
-    
-    <!--Elytes Ca-->
-    <div class="block">
-          
-        <div class="text headline" style="font-size: 2.2vmax;color: #2a2c2b">
-        electrolytes <span style="color: #374140;font-size:1.8vmax">&bull; Calcium</span>
-            
-        </div>
-        
-    
-    
-    </div> 
     
     
     <!--end Div pointer-->
@@ -570,8 +597,11 @@
       var i;
       var slides = document.getElementsByClassName(slideID[set]);
       var next = document.getElementsByClassName('nextS');
-      var prev = document.getElementsByClassName('prevS')
+      var prev = document.getElementsByClassName('prevS');
+      var prog = document.getElementsByClassName('slideProgress');
+      var progM = document.getElementsByClassName('slideProgressM')
 
+      
         next[set].style.display = 'block';
         prev[set].style.display = 'block';
       
@@ -591,7 +621,11 @@
           }
       
       slides[slideIndex[set]-1].style.display = "block";
-    
+
+      
+      prog[set].innerHTML = ' ('+ slideIndex[set] + '/' + slides.length + ')';
+      progM[set].innerHTML = ' ('+ slideIndex[set] + '/' + slides.length + ')';
+      
       }
     
     </script>	
