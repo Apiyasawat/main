@@ -57,8 +57,8 @@
 
     .pointer {
     cursor: pointer;
-    height: 0.5em;
-    width: 0.5em;
+    height: 0.5vmax;
+    width: 0.5vmax;
     background-color: #ff0d7b;
     border-radius: 50%;
     position: fixed;  
@@ -86,9 +86,10 @@
 
     @media only screen and (max-width: 800px){
         .block {height: fit-content}
-        .imgBox {height: auto;width: 98%;}
+        .imgBox {height: auto;width: 98%;box-shadow: none;}
         .container {min-height: 56vw;height:auto;width: 100%;
         padding-top: 20px}
+        .card {box-shadow: none}
     }
     
     
@@ -167,6 +168,8 @@
 
 #jWave> table, th {font-size:2.5vmax}
 #jWave> table, td {font-size: 2.2vmax}
+ul { display: flex; margin: 0; padding: 0; overflow: hidden; }
+li { display: block; list-style: none; }
       
 </style>
     
@@ -190,6 +193,57 @@
       
     <!--pointer-->
     <div onclick="pointer()"><span class="pointer" style="display: none"></span>  
+
+    <!--mobile testing-->
+    <ul class="container creme">
+            
+        <!--intro-->
+        <li class="slideSet1" style="color:black;">
+            <div class="row">
+                <div class="col2" style="align-self: center;">
+                    <img src="media/Ca/AP.jpg" style="align-self: center;width: 100%">
+                </div>
+                <div class="col2 pad head" 
+                style="font-size: 3vmax;color:#2a2c2b;align-self: center;text-align: left">
+                <div style="font-size: 5vmax;border-bottom: #374140 solid 0.1vmax;margin-bottom: 1vmax">
+                    Calcium </div>
+                is the ion of the phase 2. <br>
+                Imbalance of Calcium affects <span style="color:#ff0d7b;font-size:4vmax">ST segment.</span>
+                </div>
+            </div>
+            
+        </li>
+
+        <!--hyp0Ca-->
+        <li class="slideSet1">
+            <div>
+                <img src="media/Ca/HypoCa.jpg"  class="imgBox"></div>
+            <div class="text caption" style="color:#374140"> 
+                Hypocalcemia: prolonged ST segment.</div>
+            </li>   
+
+        <!--hyperCa-->
+        <li class="slideSet1">
+            <div>
+                <img src="media/Ca/HyperCa.png"  class="imgBox"></div>
+            <div class="text caption" style="color:#374140"> 
+                68F with metastic CA with serum Calcium of 14 mEq/l. </div>
+            </li>   
+
+        <!--hyperCa explain-->
+        <li class="slideSet1">
+            <div>
+                <img src="media/Ca/HyperCa label.png"  class="imgBox"></div>
+            <div class="text caption" style="color:#374140"> 
+                Osborn wave (positive deflection at J point), short QTc, and ST elevation.</div>
+            </li>   
+
+       
+                    
+      <a class="prevS" onclick="plusSlides(-1,1)"><i class="fas fa-arrow-circle-left"></i></a>
+      <a class="nextS" onclick="plusSlides(1,1)"><i class="fas fa-arrow-circle-right"></i></a>
+ 
+    </ul>
     
     <!--Elytes K-->
     <div class="block">
@@ -283,7 +337,7 @@
                 <div>
                     <img src="media/K/HyperK/sinus arrest.png" class="imgBox">
                     <div class="text caption"> 
-                    Sinus arrest and interventricular conduction delay.</div>
+                    Sinus arrest and intraventricular conduction delay.</div>
                     
                 </div>
             </div>     
@@ -506,8 +560,14 @@
     </div>
     
     
-      
-    
+    <!--Elytes Ca-->
+    <div class="block">
+          
+        <div class="text headline" style="font-size: 2.2vmax;color: #2a2c2b">
+        electrolytes <span style="color: #374140;font-size:1.8vmax">&bull; Calcium</span>
+            
+        </div>
+        
     
     <!--end Div pointer-->
     </div>
@@ -517,6 +577,16 @@
     <script src="pointer.js" ></script>
     <script>
     
+    //scroll testing
+    let liEls = document.querySelectorAll('ul li');
+let index = 0;
+window.show = function(increase) {
+  index = index + increase;
+  index = Math.min(Math.max(index,0), liEls.length-1);
+  liEls[index].scrollIntoView({behavior: 'smooth'});
+}
+
+
     //nav and pointer
     //up arrow
     window.addEventListener("keydown", function(event) {
