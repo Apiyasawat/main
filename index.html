@@ -601,9 +601,9 @@ font-family: 'Quicksand', sans-serif;font-weight: 400;}
       var prog = document.getElementsByClassName('slideProgress');
       var progM = document.getElementsByClassName('slideProgressM')
 
-      
+      if (screen.width>800){
         next[set].style.display = 'block';
-        prev[set].style.display = 'block';
+        prev[set].style.display = 'block';}
       
 
       if (n >= slides.length) {
