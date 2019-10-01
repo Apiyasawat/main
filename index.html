@@ -204,6 +204,9 @@ font-family: 'Quicksand', sans-serif;font-weight: 400;}
         <span style="font-size:2vmax;line-height: 90%" class="text">
             Because <span style="color:#e04338;font-weight: 600;font-size: 2.5vmax">HEART</span> is not alone.
         </span>
+        <br>
+        <a href="https://heartrhythmbox.com" target="_blank">
+        <img src="box transparent.png" style="width: 2vmax"></a>
         </div>
     </div>
       
@@ -693,6 +696,14 @@ font-family: 'Quicksand', sans-serif;font-weight: 400;}
                     Chronic Thromboembolic Pulmonary Hypertension (CTEPH)</div>
             </div>
 
+            <!--CTEPH explain-->
+            <div class="slideSet3">
+                <div style="text-align: center">
+                    <img src="media/Lungs/CTEPH Label.jpg" class="imgBox">
+                </div>
+                <div class="text caption" style="color:white"> 
+                    RV overload: RA and RV enlargement, RV strain, and RBBB.</div>
+            </div>
 
 
             <a class="prevS noMobile" onclick="plusSlides(-1,3)"><i class="fas fa-angle-left noMobile"></i></a>
@@ -701,6 +712,60 @@ font-family: 'Quicksand', sans-serif;font-weight: 400;}
                 <a onclick="plusSlides(-1,3)"><i class="fas fa-angle-left"></i></a>&nbsp;
                 <span class="slideProgressM"></span>&nbsp;
                 <a onclick="plusSlides(1,3)"><i class="fas fa-angle-right"></i></a>
+            </span>
+        
+        </div>
+    
+    </div>
+
+    <!--Brain-->
+    <div class="block">
+        
+        <div class="text headline" style="font-size: 2.2vmax;color: #2a2c2b">
+        Brain
+        <span class="slideProgress noMobile"></span>    
+        </div>
+        
+    <!--slideset3-->
+        <div class="container pink">
+            
+            <!--deep T-->
+            <div class="slideSet4">
+                <div style="text-align: center">
+                    <img src="media/Brain/ICH.JPG" class="imgBox">
+                </div>
+                <div class="text caption" style="color:white"> 
+                    75M with change in mental status.</div>
+            </div>
+
+            <!--ICH ECG-->
+            <div class="slideSet4">
+                <div class="row">
+                <div class="col2-3 lightGrey pad card" style="text-align: center;align-self: center">
+                    <img src="media/Brain/ICH.JPG" style="width: 100%">
+                </div>
+                <div class="text col1-3 pad grey card" style="color:white;font-size: 2.5vmax"> 
+                    <span class="head">
+                        3 most common ECG changes in intracranial hemorrhage are
+                    </span>
+                    <ul style="list-style:square">
+                        <li>Widening and inverted T waves in precordial leads.</li>
+                        <li>Prolonged QTc</li>
+                        <li>Bradycardia</li>
+                    </ul>
+                    <div class="text pad" style="font-size: 1.5vmax;color:#888">
+                        Ref: Marriott’s practical electrocardiography. 2014.
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <a class="prevS noMobile" onclick="plusSlides(-1,4)"><i class="fas fa-angle-left noMobile"></i></a>
+            <a class="nextS noMobile" onclick="plusSlides(1,4)"><i class="fas fa-angle-right noMobile"></i></a>
+            <span class="mobileOnly navM">
+                <a onclick="plusSlides(-1,4)"><i class="fas fa-angle-left"></i></a>&nbsp;
+                <span class="slideProgressM"></span>&nbsp;
+                <a onclick="plusSlides(1,4)"><i class="fas fa-angle-right"></i></a>
             </span>
         
         </div>
@@ -746,8 +811,8 @@ font-family: 'Quicksand', sans-serif;font-weight: 400;}
     var pSwitch = 0;
     
     var slideIndex = [1,1,1,1];
-    var slideID = ['slideSet0', 'slideSet1','slideSet2','slideSet3'];
-    showSlides(1,0);showSlides(1,1),showSlides(1,2),showSlides(1,3);
+    var slideID = ['slideSet0', 'slideSet1','slideSet2','slideSet3','slideSet4'];
+    showSlides(1,0);showSlides(1,1),showSlides(1,2),showSlides(1,3),showSlides(1,4);
     
     
     function plusSlides(n, set) {
