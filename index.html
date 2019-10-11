@@ -42,6 +42,9 @@
 
     .green {background-color: #27CDA7}
     .red {background-color:#e98ba0}
+
+    .title {font-size: 5vmax;color:white;
+      padding: 38vh 1vmax 1vmax 1vmax;text-align: center;}
    
   </style>
 
@@ -57,21 +60,23 @@
     <!--home 0-->
     <div class="container red">
       <div style="font-size: 5vmax;color:white;
-      padding-top: 20vh;text-align: center;line-height: 120%">
+      padding-top: 20vh;text-align: center;">
         Top 10 Tracings <br>
         <span style="font-weight: 400;font-size: 3vmax;padding: 0.5vmax 1vmax;
         border-radius: 12px;color: white" class="green">
-        You Must Know before the Exam</span><br>
-        <span style="font-size:2.2vmax;font-weight: 400;color: #f1f1f1">
-        device tracings &bull;  egms &bull; ecgs
-        </span>
+        You Must Know before the Exam</span>
       </div>
+      <div style="font-size:2.2vmax;font-weight: 400;color: white;line-height: 130%;text-align: center;">
+        device tracings &bull;  egms &bull; ecgs
+        <br><br>
+        <i style="font-size:1.8vmax;color:#f1f1f1">swipe for more --></i>
+      </div>
+      
   </div>
 
      <!--#1 railroad sign 1-->
      <div class="container red">
-      <div style="font-size: 5vmax;color:white;
-      padding-top: 38vh;text-align: center;">
+      <div class="title">
         #1 Railroad Sign
       </div>
     </div>
@@ -121,8 +126,7 @@
 
     <!--#2 noise title 7-->
     <div class="container red">
-      <div style="font-size: 5vmax;color:white;
-      padding-top: 38vh;text-align: center;">
+      <div class="title">
         #2 Noise in Device Tracings
       </div>
     </div>
@@ -178,8 +182,7 @@
 
     <!--#3 noise ecg title 13-->
       <div class="container red">
-        <div style="font-size: 5vmax;color:white;
-        padding-top: 38vh;text-align: center;">
+        <div class="title">
           #3 Noise in ECG Tracings
         </div>
     </div>
@@ -219,11 +222,136 @@
       </amp-img>
       <div class="caption">Pause artifacts. QRSs did not end with T waves.</div>
     </div>
+
+    <!--#4 PVC term SVT title 18-->
+    <div class="container red">
+      <div class="title">
+        #4 Ventricular Premature Beat (VPB) that terminated SVT.
+      </div>
+    </div>
+
+    <!--#4 PVC term SVT 19-->
+    <div class="container">
+      <amp-img src="media\PVC\AVRT1.png"
+      layout="fill"
+      class="contain">
+      </amp-img>
+      <div class="caption">His synchronous VPB without retrograde atrial depolarization terminated SVT. AVRT is most likely.</div>
+    </div>
+
+    <!--#4 PVC term SVT 20-->
+    <div class="container">
+      <amp-img src="media\PVC\AVRT2.png"
+      layout="fill"
+      class="contain">
+      </amp-img>
+      <div class="caption">Similar tracing to the previous. AT & AVNRT can be excluded.</div>
+    </div>
+
+    <!--#4 PVC term SVT 21-->
+    <div class="container">
+        <amp-img src="media\PVC\xAT.png"
+        layout="fill"
+        class="contain">
+        </amp-img>
+        <div class="caption">VPB was not His synchrounous. SVT was terminated without A.
+          AT was excluded. AVNRT & AVRT remained possible. </div>
+      </div>
+
+      <!--#4 PVC term SVT 22-->
+    <div class="container">
+        <amp-img src="media\PVC\none.png"
+        layout="fill"
+        class="contain">
+        </amp-img>
+        <div class="caption">VPB was not His synchrounous. SVT was terminated with A.
+         AT, AVNRT, & AVRT remained possible. </div>
+    </div>
+
+    <!--#5 entrain title 23-->
+    <div class="container red">
+        <div class="title">
+          #5 Entrained or Not Entrained
+        </div>
+      </div>
+
+    <!--#5 entrain 24-->
+    <div class="container">
+          <amp-img src="media\entrainment\VT.png"
+          layout="fill"
+          class="contain">
+          </amp-img>
+          <div class="caption">V pacing during VT</div>
+    </div>
+
+    <!--#5 entrain 25-->
+    <div class="container">
+        <amp-img src="media\entrainment\VT label.png"
+        layout="fill"
+        class="contain">
+        </amp-img>
+        <div class="caption">Not Entrained. V rate was unchanged.</div>
+    </div>
+
+    <!--#5 entrain 26-->
+    <div class="container">
+        <amp-img src="media\entrainment\SVT.png"
+        layout="fill"
+        class="contain">
+        </amp-img>
+        <div class="caption">V pacing during SVT</div>
+    </div>
+
+    <!--#5 entrain 27-->
+    <div class="container">
+        <amp-img src="media\entrainment\SVT label.png"
+        layout="fill"
+        class="contain">
+        </amp-img>
+        <div class="caption">Not Entrained. A rate was unchanged.</div>
+    </div>
+
+    <!--#5 entrain 28-->
+    <div class="container">
+        <amp-img src="media\entrainment\pVAAV.png"
+        layout="fill"
+        class="contain">
+        </amp-img>
+        <div class="caption">Entrained with psuedo V-A-A-V response.</div>
+    </div>
+
+    <!--#6 ARVC title 29-->
+    <div class="container red">
+        <div class="title">
+          #5 ARVC
+        </div>
+      </div>
+
+    <!--#6 ARVC 30-->
+    <div class="container">
+        <amp-img src="media\ARVC\ECG.png"
+        layout="fill"
+        class="contain">
+        </amp-img>
+        <div class="caption">T wave inversion across chest leads (beyond V3),
+          the most common finding in ARVC.
+        </div>
+    </div>
+
+    <!--#6 ARVC 31-->
+    <div class="container">
+        <amp-img src="media\ARVC\VT.png"
+        layout="fill"
+        class="contain">
+        </amp-img>
+        <div class="caption">VT from RV base or septum (not RVOT).
+        </div>
+    </div>
     
     
   </amp-carousel>
 
-  <!--button-->
+  <!--carousel preview-->
   <div class="carousel-preview" style="text-align: center">
     <button on="tap:carousel-with-preview.goToSlide(index=0)">
       Home
@@ -237,6 +365,18 @@
     <button on="tap:carousel-with-preview.goToSlide(index=13)">
       #3
     </button>
+    <button on="tap:carousel-with-preview.goToSlide(index=18)">
+      #4
+    </button>
+    <button on="tap:carousel-with-preview.goToSlide(index=23)">
+        #5
+      </button>
+    <button on="tap:carousel-with-preview.goToSlide(index=29)">
+          #6
+    </button>
   </div>
+
+  <!--footer-->
+
 </body>
 </html>
