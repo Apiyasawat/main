@@ -9,13 +9,20 @@
 body {margin: 0;padding: 0;}
 .san {font-family: 'Montserrat', sans-serif;}
 .serif {font-family: 'Libre Baskerville', serif;}
-.col {display: flex;}
+.col {display: flex;justify-content: center;align-items: center;}
+@media only screen and (max-width: 1200px) {
+	.col {flex-direction: column;}
+}
 .red {background-color: #CD1F1B;}
 .redTxt {color:#CD1F1B}
 .lightGrey {background-color: #f1f1f1;}
 .darkGrey {background-color: #252525;}
 .greyTxt {color: #252525;}
 .center {margin-left: auto;margin-right: auto;}
+.imgCard {border-radius: 1vmax;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.ref {font-size: 1.5vmax;color: #555;text-decoration: none;font-family: 'Libre Baskerville', serif;}
 
 </style>
 <body>
@@ -42,6 +49,86 @@ body {margin: 0;padding: 0;}
 	<div style="text-align: center;padding: 3vmax;">
 	<img src="media/Jpoint.png" style="width: 100%;height: auto;max-width: 500px;">
 	</div>
+</div>
+
+<!--2 syndrome under J wave-->
+<div style="background-color: white;">
+	<div class="col" style="padding-top: 5vmax;">
+		<!--brugada-->
+		<div style="padding:1vmax 2vmax;flex: 50%;align-self: center;text-align: center;">
+			<img src="media/Jpoint.png" class="imgCard" style="width: 95%">
+		</div>
+		<div style="padding: 2.5vmax;flex: 50%;;align-self:center;">
+			<div class="san redTxt" style="font-size: 4vmax;">
+			BRUGADA
+			</div>
+			<div class="serif" style="font-size: 2vmax;color: #555;padding-top: 2vmax;line-height: 150%;">
+			<span style="color: #252525;font-size: 2.2vmax;"> Right ventricular variant of J wave syndrome.</span><br>
+			The region most affected by the disease is the anterior right
+			ventricular outflow tract(RVOT). The patients display J-
+			point and ST-segment elevation in the right precordial leads.
+				
+			</div>
+		</div>
+	</div>
+	<div class="col" style="padding-top: 5vmax;">
+		<!--ER-->
+		<div style="padding:1vmax 2vmax;flex: 50%;align-self: center;text-align: center;">
+			<img src="media/Jpoint.png" class="imgCard" style="width: 95%;">
+		</div>
+		<div style="padding: 2.5vmax;flex: 50%;;align-self: center;">
+			<div class="san redTxt" style="font-size: 4vmax;">
+			EARLY REPOLARIZATION
+			</div>
+			<div class="serif" style="font-size: 2vmax;color: #252525;padding-top: 2vmax;line-height: 150%;">
+				Distinct J-wave or J-point elevation, notch, or slur of the terminal part of the QRS, and
+				ST-segment elevation in the lateral (type I), infero-lateral (type II), or 
+				infero-lateral plus anterior or right ventricular leads (type III).
+			</div>
+		</div>
+	</div>
+	<div style="text-align: center;padding: 2vmax;">
+		<a href="http://dx.doi.org/10.1016/j.hrthm.2015.04.014" target="_blank" class="ref">
+		Antzelevich et al. Heart Rhythm 2015.
+		</a>
+	</div>
+</div>
+
+<!--3 Mechanism-->
+<div class="darkGrey">
+	<div style="padding: 4vmax 4vmax 2vmax 4vmax;color: white;font-size: 4vmax;" class="san">
+	The MECHANISMS of J-wave Syndrome remain debatable.
+	</div>
+	<div class="col" style="padding-top: 2vmax;">
+		
+		<!--delayed depol-->
+		<div style="padding:2vmax;flex: 50%;align-self: baseline;text-align: center;">
+			<img src="media/delayDepol.png" class="imgCard" style="width: 95%;">
+			<div style="padding: 1vmax;">
+				<div class="san redTxt" style="font-size: 4vmax;">
+				DELAYED DEPOLARIZATION
+				</div>
+				<a href="https://doi.org/10.1161/CIRCULATIONAHA.110.972612" target="_blank" class="ref">
+				Nademanee et al. Circulation 2011.
+				</a>
+			</div>
+		</div>
+
+		<!--early repol-->
+		<div style="padding:4vmax 2vmax 2vmax 2vmax;flex: 50%;align-self: baseline;text-align: center;">
+			<img src="media/earlyRepol.png" class="imgCard" style="width: 95%;">
+			<div style="padding: 1vmax;">
+				<div class="san redTxt" style="font-size: 4vmax;">
+				EARLY REPOLARIZATION
+				</div>
+				<a href="https://doi.org/10.1016/j.jacc.2014.01.067" target="_blank" class="ref">
+				Szel & Antzelevich. JACC 2011.
+				</a>
+			</div>
+		</div>
+		
+	</div>
+
 </div>
 
 <script>
