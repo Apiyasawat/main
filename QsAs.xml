@@ -888,6 +888,37 @@
     <ref>NA</ref>
 </question>
 
+<!--AHRE-->
+<question>
+    <index>AHRE</index>
+    <clinical>The device technician asks for your attention to the interrogation a pacemaker of one of the patient in your pacemaker clinic.
+    The patient herself is a 65 year-old lady with history of CAD s/p PCI, DM, and HTN. The pacemaker was implanted 2 years ago for syncope and sinus node dysfunction. Echocardiogram done 2 years ago showed Grade II diastolic dysfunction, LVEF 65%, and  mild MR.
+    She practices yoga twice a week and complains of no cardiac symptomas. Her current medications include Clopigodrel 75 mg/d, Empagliflozin 10 mg/d, and Telmisartan 80 mg/d.
+    Pacemaker interrogation today shows normal pacemaker parameters. There were multiple events of atrial high rate, the longest was more than 30 hours. One of the episodes tracing is as shown.
+        </clinical>
+           
+    <qImage>media\AHRE.jpg</qImage>
+    <mainQ>What is your next appropriate management?
+        </mainQ>
+    <choices>
+        <a>Coronary angiogram</a>
+        <b>Initiate Amiodarone</b>
+        <c>Initiate OAC</c>
+        <d>Routine follow-up. No change in therapy</d>
+        <e>Upgrade to ICD</e>
+        </choices>
+    <answer>C</answer>
+    <exp>PPM interrogation shows atrial high rate events (AHRE). AHRE could be a result of atrial arrhythmias, far-field V, lead noise, or EMI.
+    In this case, EGM shows AF. The next step is to evaluate the need for OAC in subclinical AF or asymptomatic AF detected by intracardiac, implantable, or wearable monitors and confirmed by intracardiac electrogram or review of the recorded rhythm on the ECG. 
+    Things to consider:
+    1. Stroke and TE rate from AHRE or Subclinical AF is LOWER than that of clinical AF.
+    2. Subclinical AF of at least 6 mins is associated with increases risks of stroke and TE. However, the risk is not high enough to justify OAC (i.e. less than 1.5%).
+    3. Subclinical AF > 24hr had higher risk than AHRE of lesser duration and approximately the same risk as clinical AF to consider OAC.
+    In this case, the patient has several risks for stroke (Age, Female, CAD, DM, and HTN) and AHRE is longer than 24 hours, OAC should be considered. 
+        </exp>
+    <aImage>media\AHRE Algo.jpg</aImage>
+    <ref>https://doi.org/10.1093/europace/euw279</ref>
+</question>
 
 
 
